@@ -2,21 +2,51 @@
   {
     "id": 1,
     "question": "What are the library opening hours?",
-    "answer": "The library operates on a seasonal schedule. Please consult the official library website or contact staff for current opening hours."
+    "answer": "During regular academic semesters, the library operates on extended hours; opening and closing times may vary by day"
   },
   {
     "id": 2,
-    "question": "Are study rooms available?",
-    "answer": "Yes, study rooms are available and can be reserved online through the library booking system."
+    "question": "Is the library accessible to visitors?",
+    "answer": "External visitors may access the library upon prior authorization from library administration"
   },
   {
     "id": 3,
-    "question": "How can I access online resources?",
-    "answer": "Online academic resources are accessible through the library’s digital platforms."
+    "question": "Are study rooms available?",
+    "answer": "The library provides reservable study rooms intended for academic and collaborative work"
   },
   {
     "id": 4,
-    "question": "Who can I contact for help?",
-    "answer": "For further assistance, please contact the library support team."
+    "question": "Can I renew borrowed materials?",
+    "answer": "Library items may be renewed online depending on availability and user eligibility"
+  },
+  {
+    "id": 5,
+    "question": "Are printing services available?",
+    "answer": "Printing services are available within designated library areas for academic use"
+  },
+  {
+    "id": 6,
+    "question": "Does the library offer wireless internet access?",
+    "answer": "Wireless internet access is available throughout the library premises"
+  },
+  {
+    "id": 7,
+    "question": "Are food and drinks allowed?",
+    "answer": "Food is generally restricted, while bottled water may be permitted in certain areas"
+  },
+  {
+    "id": 8,
+    "question": "How can I access electronic resources?",
+    "answer": "Electronic databases and journals may be accessed through the library’s online platforms"
+  },
+  {
+    "id": 9,
+    "question": "What should I do if I lose a library item?",
+    "answer": "Lost or damaged materials may require replacement or associated fees"
+  },
+  {
+    "id": 10,
+    "question": "Who should I contact for additional help?",
+    "answer": "Library staff are available to assist with research and general inquiries"
   }
 ]
