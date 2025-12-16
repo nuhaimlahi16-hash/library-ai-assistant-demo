@@ -1,0 +1,120 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background: #ffffff;
+    color: #000;
+}
+
+/* GREEN BAR */
+.top-bar {
+    height: 80px;
+    background-color: #1f5e3b; /* EXACT green */
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0 100px;
+}
+
+.logo {
+    height: 45px;
+}
+
+/* MAIN CONTAINER */
+.container {
+    max-width: 1100px;
+    margin: 60px auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+/* TITLE */
+.title-block h1 {
+    font-size: 64px;
+    font-weight: bold;
+}
+
+.title-block h2 {
+    font-size: 26px;
+    margin-top: 10px;
+}
+
+.title-block p {
+    margin-top: 12px;
+    font-size: 18px;
+}
+
+/* ASK BAR */
+.ask-container {
+    margin: 40px auto;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.ask-container input {
+    width: 60%;
+    padding: 15px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+.ask-container button {
+    padding: 15px 25px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    background-color: #1f5e3b;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* ANSWER */
+.conversation {
+    margin-top: 20px;
+    text-align: left;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.conversation p {
+    margin-bottom: 12px;
+}
+
+/* CARDS */
+.cards {
+    margin-top: 60px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    background: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 16px;
+    padding: 30px;
+    text-align: center;
+    text-decoration: none;
+    color: #000;
+    transition: 0.2s ease;
+}
+
+.card:hover {
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.card h3 {
+    font-size: 22px;
+    margin-bottom: 12px;
+}
+
+.card p {
+    font-size: 15px;
+}

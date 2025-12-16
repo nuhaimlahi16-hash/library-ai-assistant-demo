@@ -1,0 +1,102 @@
+[
+  {
+    "id": 1,
+    "question": "What are the library opening hours?",
+    "answer": " During normal semesters (Fall and Spring): Mondays–Thursdays: 8:30 AM to Midnight; Fridays: 8:30 AM to 6 PM; Saturdays: 12 PM to 6 PM; Sundays: 2 PM to Midnight."
+  },
+  {
+    "id": 2,
+    "question": "Is the library open to the public?",
+    "answer": "Yes, external users may visit if they submit a written request approved by the library director."
+  },
+  {
+    "id": 3,
+    "question": "Where are the newspapers and magazines?",
+    "answer": "They are available digitally to the AUI community through PressReader."
+  },
+  {
+    "id": 4,
+    "question": "Is the service free of charge?",
+    "answer": "Yes, all library services are free."
+  },
+  {
+    "id": 5,
+    "question": "How to connect to the library wifi?",
+    "answer": "The library provides free, open wifi with no password required."
+  },
+  {
+    "id": 6,
+    "question": "Are there group study or meeting spaces?",
+    "answer": "Yes, bookable study rooms are available for group work. See Reservable Rooms on the library website."
+  },
+  {
+    "id": 7,
+    "question": "How do I renew a book online?",
+    "answer": "You may renew your book twice using your Millennium account. For assistance, contact m6lcirculation@aui.ma."
+  },
+  {
+    "id": 8,
+    "question": "I can't extend the loan period online, what should I do?",
+    "answer": "Please contact m6lcirculation@aui.ma for help."
+  },
+  {
+    "id": 9,
+    "question": "How do I pay fines?",
+    "answer": "Fines may be deducted from your Cash Wallet or transferred to the Business Office for deduction from your balance."
+  },
+  {
+    "id": 10,
+    "question": "Where do I find online resources?",
+    "answer": "You can access online resources through the library website."
+  },
+  {
+    "id": 11,
+    "question": "Can I eat or drink in the library?",
+    "answer": "Food and drinks are not allowed except bottled water, except in the M6L Café space."
+  },
+  {
+    "id": 12,
+    "question": "Are there printers in the library?",
+    "answer": "Yes. A black & white/color printer is available in the café area. For technical issues, contact the Copy Center."
+  },
+  {
+    "id": 13,
+    "question": "What if I lose or damage library materials?",
+    "answer": "You must pay the item’s replacement cost plus a 200 MAD processing fee and any accrued fines."
+  },
+  {
+    "id": 14,
+    "question": "Can I donate books to the Mohammed VI Library?",
+    "answer": "For book donations, contact researchandlearning@aui.ma."
+  },
+  {
+    "id": 15,
+    "question": "How do I access online resources off-campus?",
+    "answer": "Use the AUI virtual machine with your AUI credentials. See Guide to Remote Access for details."
+  },
+  {
+    "id": 16,
+    "question": "How many books can I check out and for how long?",
+    "answer": "Loan periods and borrowing limits depend on your patron type. See Borrowing Services on the website."
+  },
+  {
+    "id": 17,
+    "question": "I lost something in the library, what should I do?",
+    "answer": "Lost items are delivered to AUI’s Security department in Building 9."
+  },
+  {
+    "id": 18,
+    "question": "My question is not in the FAQ, what should I do?",
+    "answer": "Please contact researchandlearning@aui.ma."
+  },
+  {
+    "id": 19,
+    "question": "How can I create my library account?",
+    "answer": "Please contact researchandlearning@aui.ma."
+  },
+  {
+    "id": 20,
+    "question": "How can I place a hold on a checked-out book?",
+    "answer": "You may place a hold on any checked-out item. Once returned, it is reserved for three days at the Circulation Desk, and you will be notified by email."
+  }
+]

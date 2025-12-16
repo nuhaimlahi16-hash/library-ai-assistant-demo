@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>ALVIN – M6 Library Assistant</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+    <!-- TOP GREEN BAR -->
+    <div class="top-bar">
+        <img src="assets/logo.png" alt="Mohammed VI Library Logo" class="logo" />
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <main class="container">
+
+        <!-- TITLE BLOCK -->
+        <div class="title-block">
+            <h1>ALVIN</h1>
+            <h2>M6 Library Assistant</h2>
+            <p>
+                Search the library catalog, ask questions, or chat with the AI assistant.
+            </p>
+        </div>
+
+        <!-- ASK BAR -->
+        <div class="ask-container">
+            <input
+                type="text"
+                id="questionInput"
+                placeholder="Ask a question about the library..."
+            />
+            <button id="askBtn">Ask</button>
+        </div>
+
+        <!-- ANSWER AREA -->
+        <div class="conversation" id="conversation"></div>
+
+        <!-- BOXES -->
+        <div class="cards">
+
+            <a href="https://outlook.office365.com/book/M6LRoomReservations@aui.ma/?ismsaljsauthenabled=true"
+               target="_blank"
+               class="card">
+                <h3>Book a Room</h3>
+                <p>Reserve silent and group study spaces</p>
+            </a>
+
+            <div class="card">
+                <h3>Library Hours</h3>
+                <p>Check opening hours, holidays, and updates</p>
+            </div>
+
+            <a href="https://libguides.aui.ma/az.php"
+               target="_blank"
+               class="card">
+                <h3>Find a Book</h3>
+                <p>Search books by title, author, or topic</p>
+            </a>
+
+            <a href="https://libguides.aui.ma"
+               target="_blank"
+               class="card">
+                <h3>Find Articles</h3>
+                <p>Access academic databases and journals</p>
+            </a>
+
+        </div>
+    </main>
+
+<script src="script.js"></script>
+</body>
+</html>
