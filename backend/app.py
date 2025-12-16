@@ -6,12 +6,11 @@ from utils.faq_search import search_faq
 from utils.search import search_faiss
 from utils.llm import generate_answer
 
-app = FastAPI(title="ALVIN – Library AI Assistant (Demo)")
+app = FastAPI()
 
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
-    allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
@@ -20,20 +19,24 @@ class Question(BaseModel):
     question: str
 
 @app.post("/ask")
-async def ask_question(data: Question):
-    question = data.question
+async def ask(data: Question):
+    q = data.question
 
-    # 1. FAQ first
-    faq_answer = search_faq(question)
-    if faq_answer:
-        return {"answer": faq_answer}
+    faq = search_faq(q)
+    if faq:
+        return {
+            "answer": (
+                "Here is the information you requested:\n\n"
+                f"- {faq}\n\n"
+                "If you require further assistance, please contact the library staff."
+            )
+        }
 
-    # 2. Semantic search + LLM
-    context = search_faiss(question)
-    answer = generate_answer(context, question)
+    docs = search_faiss(q)
+    answer = generate_answer(docs, q)
 
     return {"answer": answer}
 
 @app.get("/")
-def health_check():
-    return {"status": "ALVIN demo backend running"}
+def health():
+    return {"status": "running"}
