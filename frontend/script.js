@@ -1,40 +1,26 @@
-const askBtn = document.getElementById("askBtn");
 const input = document.getElementById("questionInput");
-const conversation = document.getElementById("conversation");
+const askBtn = document.getElementById("askBtn");
+const answerEl = document.getElementById("answer");
+const userQ = document.getElementById("userQuestion");
 
 askBtn.onclick = async () => {
-    const question = input.value.trim();
-    if (!question) return;
+    const text = input.value.trim();
+    if (!text) return;
 
-    conversation.innerHTML = `
-        <p><strong>You:</strong> ${question}</p>
-        <p><strong>ALVIN:</strong> Loading...</p>
-    `;
+    userQ.textContent = text;
+    answerEl.textContent = "Loading...";
 
     try {
         const res = await fetch("http://127.0.0.1:8000/ask", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ question })
+            body: JSON.stringify({ question: text })
         });
 
         const data = await res.json();
-
-        conversation.innerHTML = `
-            <p><strong>You:</strong> ${question}</p>
-            <p><strong>ALVIN:</strong></p>
-            <ul>
-                ${data.answer
-                    .split("\n")
-                    .map(line => `<li>${line}</li>`)
-                    .join("")}
-            </ul>
-        `;
+        answerEl.textContent = data.answer || "No answer available.";
 
     } catch {
-        conversation.innerHTML = `
-            <p><strong>You:</strong> ${question}</p>
-            <p><strong>ALVIN:</strong> The server is not responding. Please try again.</p>
-        `;
+        answerEl.textContent = "Server not responding.";
     }
 };
