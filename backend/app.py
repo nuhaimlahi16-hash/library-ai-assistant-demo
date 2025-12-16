@@ -8,35 +8,66 @@ from utils.llm import generate_answer
 
 app = FastAPI()
 
+# -----------------------------
+# CORS
+# -----------------------------
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
+    allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
 
+# -----------------------------
+# REQUEST MODEL
+# -----------------------------
 class Question(BaseModel):
     question: str
 
+# -----------------------------
+# ASK ENDPOINT
+# -----------------------------
 @app.post("/ask")
-async def ask(data: Question):
-    q = data.question
+async def ask_question(data: Question):
+    question = data.question.strip()
 
-    faq = search_faq(q)
-    if faq:
+    # 1) FAQ FIRST
+    faq_answer = search_faq(question)
+    if faq_answer:
         return {
-            "answer": (
-                "Here is the information you requested:\n\n"
-                f"- {faq}\n\n"
-                "If you require further assistance, please contact the library staff."
-            )
+            "answer": format_answer(faq_answer)
         }
 
-    docs = search_faiss(q)
-    answer = generate_answer(docs, q)
+    # 2) FAISS + LLM
+    docs = search_faiss(question)
+    ai_answer = generate_answer(docs, question)
 
-    return {"answer": answer}
+    return {
+        "answer": ai_answer
+    }
 
+# -----------------------------
+# FORMAT FAQ ANSWERS
+# -----------------------------
+def format_answer(text: str) -> str:
+    """
+    Convert plain FAQ answers into
+    formal bullet-point responses.
+    """
+    lines = text.split(";")
+    bullets = "\n".join([f"- {line.strip()}" for line in lines])
+
+    return (
+        "Here is the information you requested:\n\n"
+        f"{bullets}\n\n"
+        "If you require further clarification, "
+        "please contact the library staff."
+    )
+
+# -----------------------------
+# HEALTH CHECK
+# -----------------------------
 @app.get("/")
-def health():
-    return {"status": "running"}
+def root():
+    return {"status": "ALVIN backend is running"}
